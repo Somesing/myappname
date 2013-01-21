@@ -170,6 +170,15 @@
       .filename {
         font-style: italic;
       }
+
+      .red {
+	color: red;
+      }
+
+      .green {
+	color: green;
+      }
+
     </style>
     <script type="text/javascript">
       function about() {
@@ -231,7 +240,29 @@
               <h2>Create your database</h2>
               <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
             </li>
-            <img src="http://www.lolcats.com/images/u/11/45/lolcatsdotcom3gp6wm7dw3jihq9t.jpg"/>
+	
+	    <div class="red">
+	     <p>Why you no work Rails!</p>
+	    </div>
+	      <%= link_to "Posts", posts_path %>
+	
+	    <div class="green">
+	      <form action="http://createposts.com
+	            method="post"
+	      <p><h3> Title </h3></p>
+		  <input  type="string"  name="a_field"/>
+	      <p><h3> Post Body </h3></p>
+		  <input  type="text"    name="a_field"/>
+		  <input  type="submit"
+			  value="submit">
+	      </form>
+	   </div>
+
+            <a href = "http://www.xkcd.com">
+		xkcd
+	    </a>
+
+	    <img src="http://www.lolcats.com/images/u/11/45/lolcatsdotcom3gp6wm7dw3jihq9t.jpg"/>
           </ol>
         </div>
       </div>
