@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.belongs_to :name
       t.string :title
       t.text :content
+      t.boolean :isVisible
 
       t.timestamps
     end

@@ -23,6 +23,17 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
+  
+<div class="control-group">
+    <%=f.label :isVisible, class:'control-label'%>
+  <div class="controls">
+    <label class="radio inline">
+      <%=f.radio_button(:make_invisible, "true") %>
+      <%=f.label(:isVisible, "Post is now private") %>
+    </label>
+  </div>
+</div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
