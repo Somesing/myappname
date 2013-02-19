@@ -1,0 +1,17 @@
+<%= form_for(@testspec) do |f| %>
+  <% if @testspec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testspec.errors.count, "error") %> prohibited this testspec from being saved:</h2>
+
+      <ul>
+      <% @testspec.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

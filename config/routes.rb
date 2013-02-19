@@ -1,4 +1,7 @@
 Myappname::Application.routes.draw do
+  resources :testspecs
+
+
   resources :posts
 
 

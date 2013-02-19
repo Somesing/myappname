@@ -11,19 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130202211655) do
+ActiveRecord::Schema.define(:version => 20130219180526) do
 
   create_table "comments", :force => true do |t|
-    t.string   "name"
+    t.integer  "name_id"
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
+  add_index "comments", ["name_id"], :name => "index_comments_on_name_id"
+
   create_table "posts", :force => true do |t|
-    t.string   "name"
+    t.integer  "name_id"
     t.string   "title"
     t.text     "content"
+    t.boolean  "isVisible"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "posts", ["name_id"], :name => "index_posts_on_name_id"
+
+  create_table "testspecs", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

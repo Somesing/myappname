@@ -1,0 +1,21 @@
+<h1>Listing testspecs</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @testspecs.each do |testspec| %>
+  <tr>
+    <td><%= link_to 'Show', testspec %></td>
+    <td><%= link_to 'Edit', edit_testspec_path(testspec) %></td>
+    <td><%= link_to 'Destroy', testspec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Testspec', new_testspec_path %>
