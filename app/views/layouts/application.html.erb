@@ -5,6 +5,18 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <% if alert %>
+  	<div class = "alert alert - error">
+  		<%= alert %>
+  	</div>
+  <%end%>
+  <% if notice %>
+  	<div class = "alert alert - success">
+  		<%= notice %>
+  	</div>
+  <% end %>
+
 </head>
 <body>
 

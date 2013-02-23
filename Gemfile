@@ -5,6 +5,9 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git''
 
+gem 'rails_admin', github: 'sferik/rails_admin'
+gem 'devise'
+
 group :development do
   gem 'sqlite3'
 end
@@ -54,3 +57,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+
+gem "devise"
