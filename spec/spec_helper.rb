@@ -5,6 +5,13 @@ require 'rspec/rails'
 require 'rspec/autorun'
 
 
+def sign_in
+  visit new_user_session_path
+  fill_in 'Email', with: 'darrenyin0110@yahoo.com'
+  fill_in 'Password', with: 'test123'
+  click_button 'Sign in'
+end
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}

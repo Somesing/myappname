@@ -32,6 +32,7 @@ module Myappname
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -45,6 +46,10 @@ module Myappname
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 
+
+    config.assets.initialize_on_precompile = false
+
+
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
@@ -56,10 +61,11 @@ module Myappname
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
-    config.assets.initialize_on_precompile = false
+    
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
@@ -70,5 +76,6 @@ module Myappname
         g.helper_specs false
     end
 
+        
   end
 end
